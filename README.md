@@ -13,7 +13,7 @@ whenever the user visits the site again.
 
 Here is a quick example using a form.
 
-1. You update the $css array in the CSS_Switch class in pi.css_switcher.php:
+1. You update the `$css` array in the `CSS_Switch` class in `pi.css_switcher.php`:
 
         var $css = array(
         	'1' => "http://example.com/index.php?css=weblog/weblog_css",
@@ -22,7 +22,7 @@ Here is a quick example using a form.
         	'4' => "http://example.com/index.php?css=weblog/weblog4_css"
         );
 
-2. You put the following in the <head> tags of your pages:
+2. You put the following in the `<head>` tags of your pages:
 
         {exp:css_switcher}
     	    <link rel='stylesheet' type='text/css' media='all' href='{file}' />
