@@ -52,7 +52,7 @@ The tag also has two optional parameters.
 
 1. `setting=""` - Used to change how the CSS files are chosen. Three different possible
 settings.
- - `setting="normal"` : Relies on the $_GET, $_POST, or $_COOKIE
+ - `setting="normal"` : Relies on the `$_GET`, `$_POST`, or `$_COOKIE`
 variables to choose a member of the array. If neither of those
 are found or the one found is not in the array, then it chooses
 the default member of the array
