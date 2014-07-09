@@ -15,32 +15,32 @@ Here is a quick example using a form.
 
 1. You update the $css array in the CSS_Switch class in pi.css_switcher.php:
 
-    var $css = array(
-    	'1' => "http://example.com/index.php?css=weblog/weblog_css",
-    	'apples' => "http://example.com/index.php?css=weblog/weblog2_css",
-    	'oranges' => "http://example.com/index.php?css=weblog/weblog3_css",
-    	'4' => "http://example.com/index.php?css=weblog/weblog4_css"
-    );
+        var $css = array(
+        	'1' => "http://example.com/index.php?css=weblog/weblog_css",
+    	    'apples' => "http://example.com/index.php?css=weblog/weblog2_css",
+        	'oranges' => "http://example.com/index.php?css=weblog/weblog3_css",
+        	'4' => "http://example.com/index.php?css=weblog/weblog4_css"
+        );
 
 2. You put the following in the <head> tags of your pages:
 
-    {exp:css_switcher}
-    	<link rel='stylesheet' type='text/css' media='all' href='{file}' />
-    	<style type='text/css' media='screen'>@import "{file}";</style>
-    {/exp:css_switcher}
+        {exp:css_switcher}
+    	    <link rel='stylesheet' type='text/css' media='all' href='{file}' />
+        	<style type='text/css' media='screen'>@import "{file}";</style>
+        {/exp:css_switcher}
 
 
 3. You set up a form on your front page where the user chooses their
 skin and submits the form:
 
-    <form action="index.php" method="post">
-    	<select name="css_skin" id="css_skin">
-    		<option value="1">Default</option>
-    		<option value="apples">Apples</option>
-    		<option value="oranges">Oranges</option>
-    		<option value="4">Pineapples</option>
-    	</select>
-    </form>
+        <form action="index.php" method="post">
+        	<select name="css_skin" id="css_skin">
+        		<option value="1">Default</option>
+        		<option value="apples">Apples</option>
+        		<option value="oranges">Oranges</option>
+        		<option value="4">Pineapples</option>
+        	</select>
+        </form>
 
 4. CSS Switcher finds the requested member of the $css array and puts
 in the requested CSS file's URL. Then, a cookie is set that will
