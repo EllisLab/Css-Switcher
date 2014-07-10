@@ -69,5 +69,5 @@ be incremented by a value of one (2, 3, 4, etc.) by their order.
 
 ## Change Log
 
-- Version 1.1
+- 1.1
 	- Updated plugin to be 2.0 compatible
